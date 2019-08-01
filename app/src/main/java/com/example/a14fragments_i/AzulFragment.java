@@ -8,18 +8,16 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.Toast;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class VerdeFragment extends Fragment {
+public class AzulFragment extends Fragment {
 
     View vista;
 
-    public VerdeFragment() {
+    public AzulFragment() {
         // Required empty public constructor
     }
 
@@ -28,7 +26,7 @@ public class VerdeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        vista = inflater.inflate(R.layout.fragment_verde, container, false);
+        vista = inflater.inflate(R.layout.fragment_azul, container, false);
 
         return vista;
     }

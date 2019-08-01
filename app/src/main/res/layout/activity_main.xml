@@ -6,46 +6,67 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
+
+    <Button
+        android:id="@+id/btnRojo"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Ejemplo de uso Fragments"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/rojoFondo"
+        android:onClick="onClick"
+        android:text="@string/rojo"
+        app:layout_constraintEnd_toStartOf="@+id/btnVerde"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnVerde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/verdeFondo"
+        android:onClick="onClick"
+        android:text="@string/verde"
+        app:layout_constraintBottom_toBottomOf="@+id/btnRojo"
+        app:layout_constraintEnd_toStartOf="@+id/btnAzul"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnRojo"
+        app:layout_constraintTop_toTopOf="@+id/btnRojo" />
+
+    <Button
+        android:id="@+id/btnAzul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/azulFondo"
+        android:onClick="onClick"
+        android:text="@string/azul"
+        app:layout_constraintBottom_toBottomOf="@+id/btnVerde"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnVerde"
+        app:layout_constraintTop_toTopOf="@+id/btnVerde" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/btnVerde">
 
         <fragment
-            android:id="@+id/fragmentRojo"
+            android:id="@+id/fragmentContenedor"
             android:name="com.example.a14fragments_i.RojoFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            tools:layout="@layout/fragment_rojo" />
-
-        <fragment
-            android:id="@+id/fragmentVerde"
-            android:name="com.example.a14fragments_i.VerdeFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            tools:layout="@layout/fragment_verde" />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 

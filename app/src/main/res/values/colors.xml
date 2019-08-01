@@ -7,4 +7,8 @@
     <color name="rojoTexto">#5C0303</color>
     <color name="verdeFondo">#71AF4B</color>
     <color name="verdeTexto">#174102</color>
+    <color name="azulFondo">#8FCEE7</color>
+    <color name="azulTexto">#03435C</color>
 </resources>
+
+

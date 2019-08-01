@@ -17,7 +17,6 @@ import android.widget.Toast;
  */
 public class RojoFragment extends Fragment {
 
-    Button btnRojo;
     View vista;
 
     public RojoFragment() {
@@ -31,15 +30,6 @@ public class RojoFragment extends Fragment {
         // Inflate the layout for this fragment
 
         vista = inflater.inflate(R.layout.fragment_rojo, container, false);
-
-        btnRojo = vista.findViewById(R.id.btnRojo);
-
-        btnRojo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getContext(), "Has presionado el ROJO", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         return vista;
     }
