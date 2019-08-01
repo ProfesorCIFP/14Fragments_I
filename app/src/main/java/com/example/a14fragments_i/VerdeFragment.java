@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 
 /**
@@ -15,6 +17,8 @@ import android.view.ViewGroup;
  */
 public class VerdeFragment extends Fragment {
 
+    Button btnVerde;
+    View vista;
 
     public VerdeFragment() {
         // Required empty public constructor
@@ -25,7 +29,18 @@ public class VerdeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_verde, container, false);
+        vista = inflater.inflate(R.layout.fragment_verde, container, false);
+
+        btnVerde = vista.findViewById(R.id.btnVerde);
+
+        btnVerde.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(), "Has presionado el VERDE", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        return vista;
     }
 
 }

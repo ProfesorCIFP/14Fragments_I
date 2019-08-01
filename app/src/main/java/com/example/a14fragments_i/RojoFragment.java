@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 
 /**
@@ -15,6 +17,8 @@ import android.view.ViewGroup;
  */
 public class RojoFragment extends Fragment {
 
+    Button btnRojo;
+    View vista;
 
     public RojoFragment() {
         // Required empty public constructor
@@ -25,7 +29,19 @@ public class RojoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_rojo, container, false);
+
+        vista = inflater.inflate(R.layout.fragment_rojo, container, false);
+
+        btnRojo = vista.findViewById(R.id.btnRojo);
+
+        btnRojo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(), "Has presionado el ROJO", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        return vista;
     }
 
 }
